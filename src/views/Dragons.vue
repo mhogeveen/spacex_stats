@@ -6,6 +6,22 @@
 
 <script>
 export default {
-  name: 'Dragons'
+  name: 'Dragons',
+  data () {
+    return {
+      dragonsAPI: []
+    }
+  },
+  mounted: function () {
+    fetch('https://api.spacexdata.com/v3/dragons', {
+      method: 'get'
+    })
+      .then((response) => {
+        return response.json()
+      })
+      .then((jsonData) => {
+        this.dragonsAPI = jsonData
+      })
+  }
 }
 </script>
