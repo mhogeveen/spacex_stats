@@ -2,7 +2,7 @@
   <v-app>
     <v-content>
       <Navbar />
-      <router-view />
+      <router-view/>
     </v-content>
   </v-app>
 </template>
@@ -21,3 +21,10 @@ export default {
   }
 }
 </script>
+
+<style lang="sass">
+  main
+    font-family: 'Roboto'
+  h1
+    font-family: 'Montserrat'
+</style>

@@ -14,6 +14,10 @@ import './assets/sass/index.sass'
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
+Vue.filter('capitalize', value => {
+  return value.toUpperCase()
+})
+
 new Vue({
   router,
   store,
