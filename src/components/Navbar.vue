@@ -10,6 +10,21 @@
       </v-app-bar-nav-icon>
 
       <v-toolbar-title>SpaceX Stats</v-toolbar-title>
+      <!-- <template v-slot:extension>
+        <v-tabs
+          v-model="tab"
+          align-with-title
+        >
+          <v-tabs-slider color="yellow"></v-tabs-slider>
+
+          <v-tab>
+            ello
+          </v-tab>
+          <v-tab>
+            ello
+          </v-tab>
+        </v-tabs>
+      </template> -->
     </v-app-bar>
 
     <v-navigation-drawer
