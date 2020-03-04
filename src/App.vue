@@ -23,8 +23,4 @@ export default {
 </script>
 
 <style lang="sass">
-  main
-    font-family: 'Roboto'
-  h1
-    font-family: 'Montserrat'
 </style>

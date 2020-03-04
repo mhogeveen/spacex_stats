@@ -5,45 +5,62 @@
   color: $highlight!important
   opacity: 1
 
-.dragon_header
-  padding: 0 10px
-  .header_picture
-  .header_info
-    .header_title
-      .title_data
-        line-height: 1
-        padding: 10px 0 20px 1rem
-        h1
-          padding-left: 10px
-  .header_description
-    display: flex
-    flex-direction: column
+.dragon_container
+  padding-bottom: 10px
+  .dragon_header
     padding: 0 10px
-    &_title
-      padding: 20px 0 0 0
-    &_link
-      text-decoration: none
-      color: $highlight !important
+    .header_picture
+    .header_info
+      .header_title
+        .title_data
+          line-height: 1
+          padding: 10px 0 10px 10px
+          h1, h2
+            padding-left: 10px
+            font-size: 25px
+    .header_description
+      display: flex
+      flex-direction: column
+      padding: 0 10px
+      &_title
+        padding: 10px 0 0 0
+        margin-bottom: 10px
+      &_link
+        text-decoration: none
+        color: $highlight !important
+
+.dragon_details
+  margin: 0 10px 0 10px
+  padding: 10px
+  .details_title
+    .title_text
+      line-height: 1
+      
+.title_choices
+  .choices
+    &_distance
+      margin-top: 0 !important
+    &_seperator
+    &_weight
+      margin-top: 0 !important
 
 .flex-row
   display: flex
   flex-direction: row
-  align-items: center
+  align-items: flex-end
 
-.opacity05
+.opacity04
   opacity: 0.4
 
 .activeY,
 .activeN
-  height: 30px
-  width: 30px
-  border-radius: 50%
+  height: 25px
+  width: 50px
+  border-radius: 5px
   margin-left: 10px
 
 .activeY
-  background: $activeY
-  box-shadow: 0px 0px 5px 0px rgba(220,242,141,1)
+  background-color: $activeY !important
 
 .activeN
-  background: $activeN
-  box-shadow: 0px 0px 5px 0px rgba(242,184,114,1)
+  background: $activeN !important

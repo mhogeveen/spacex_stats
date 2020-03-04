@@ -5,8 +5,8 @@
       <!-- Tab links begin here -->
       <v-tabs
         v-model="tab"
-        background-color="#F2F2F2"
-        color="#1ec6d9"
+        background-color="rgba(30,198,217,0.1span)"
+        color="#1EC6D9"
         light
       >
         <v-tab
@@ -26,7 +26,7 @@
           :key="i"
         >
           <v-card flat>
-            <v-container>
+            <v-container class="dragon_container">
 
               <!-- Content Header -->
               <v-row class="dragon_header">
@@ -44,19 +44,19 @@
                 <v-col cols="9" class="header_info">
                   <v-row class="header_title">
                     <v-col cols="4" class="flex-row title_data">
-                      <h4 class="opacity05">name:</h4>
+                      <span class="opacity04">name:</span>
                       <h1 class="">{{ dragon.name }}</h1>
                     </v-col>
                     <v-col cols="4" class="flex-row title_data">
-                      <h4 class="opacity05">id:</h4>
-                      <h1 class="">{{ dragon.id }}</h1>
+                      <span class="opacity04">id:</span>
+                      <h2 class="">{{ dragon.id }}</h2>
                     </v-col>
                     <v-col cols="4" class="flex-row title_data">
-                      <h4 class="opacity05">active:</h4>
-                      <div
+                      <span class="opacity04">active:</span>
+                      <v-card
                         :class="activeYN(dragon.active)"
                       >
-                      </div>
+                    </v-card>
                     </v-col>
                   </v-row>
                   <v-divider></v-divider>
@@ -78,6 +78,28 @@
                 </v-col>
               </v-row>
 
+              <v-card class="dragon_details">
+                <v-row class="details_title">
+                  <v-col cols="4">
+                    <h2 class="details_title_text">Details</h2>
+                  </v-col>
+                  <v-col cols="8">
+                    <v-row class="details_title_choices">
+                      <v-radio-group v-model="distance" row class="choices_distance">
+                        <v-radio label="Meters" value="meters"></v-radio>
+                        <v-radio label="Feet" value="feet"></v-radio>
+                      </v-radio-group>
+                      <div class="choices_seperator">
+                      </div>
+                      <v-radio-group v-model="weight" row class="choices_weight">
+                        <v-radio label="kg" value="kg"></v-radio>
+                        <v-radio label="lbs" value="lbs"></v-radio>
+                      </v-radio-group>
+                    </v-row>
+                  </v-col>
+                </v-row>
+              </v-card>
+
             </v-container>
           </v-card>
         </v-tab-item>
@@ -93,7 +115,9 @@ export default {
   name: 'Dragons',
   data () {
     return {
-      tab: null
+      tab: null,
+      distance: 'meters',
+      weight: 'kg'
     }
   },
   computed: {
