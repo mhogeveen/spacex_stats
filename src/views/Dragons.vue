@@ -1,12 +1,12 @@
 <template>
-  <div class="dragons_template">
+  <v-container class="dragons_template">
     <v-card>
 
       <!-- Tab links begin here -->
       <v-tabs
         v-model="tab"
         background-color="#F2F2F2"
-        color="#328C6B"
+        color="#1ec6d9"
         light
       >
         <v-tab
@@ -26,11 +26,11 @@
           :key="i"
         >
           <v-card flat>
-            <v-container pt-5 pb-5>
+            <v-container>
 
               <!-- Content Header -->
               <v-row class="dragon_header">
-                <v-col cols="3">
+                <v-col cols="3" class="header_picture">
                   <v-card>
                     <v-img
                       :src="dragon.flickr_images[0]"
@@ -41,17 +41,17 @@
                     </v-img>
                   </v-card>
                 </v-col>
-                <v-col cols="9">
-                  <v-row>
-                    <v-col cols="4" class="flex-row header_title">
+                <v-col cols="9" class="header_info">
+                  <v-row class="header_title">
+                    <v-col cols="4" class="flex-row title_data">
                       <h4 class="opacity05">name:</h4>
                       <h1 class="">{{ dragon.name }}</h1>
                     </v-col>
-                    <v-col cols="4" class="flex-row header_title">
+                    <v-col cols="4" class="flex-row title_data">
                       <h4 class="opacity05">id:</h4>
                       <h1 class="">{{ dragon.id }}</h1>
                     </v-col>
-                    <v-col cols="4" class="flex-row header_title">
+                    <v-col cols="4" class="flex-row title_data">
                       <h4 class="opacity05">active:</h4>
                       <div
                         :class="activeYN(dragon.active)"
@@ -60,7 +60,21 @@
                     </v-col>
                   </v-row>
                   <v-divider></v-divider>
-                  <p class="header_description">{{ dragon.description }}</p>
+                  <v-row class="header_description">
+                    <p class="header_description_title">
+                      {{ dragon.description }}
+                    </p>
+                    <v-btn
+                      text
+                      small
+                      width="100px"
+                      color="#1ec6d9"
+                      :href="dragon.wikipedia"
+                      target="_blank"
+                    >
+                      <v-icon left>mdi-open-in-new</v-icon>Read more
+                    </v-btn>
+                  </v-row>
                 </v-col>
               </v-row>
 
@@ -69,7 +83,7 @@
         </v-tab-item>
       </v-tabs-items>
     </v-card>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -101,50 +115,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-  .dragons_template
-    margin: 10px 10px
-
-  .categoryText
-    color: #328C6B!important
-    opacity: 1
-
-  .card_header
-    display: flex
-    &_description
-      display: flex
-      flex-direction: column
-
-  .header
-    &_title
-      line-height: 1
-      padding: 10px 0 20px 1rem
-      h1
-        padding-left: 5px
-    &_description
-      padding: 20px 0 0 0
-
-  .flex-row
-    display: flex
-    flex-direction: row
-    align-items: center
-
-  .opacity05
-    opacity: 0.4
-
-  .activeY,
-  .activeN
-    height: 30px
-    width: 30px
-    border-radius: 50%
-    margin-left: 5px
-
-  .activeY
-    background: #328C6B
-    box-shadow: 0px 0px 5px 0px rgba(50,140,107,1)
-
-  .activeN
-    background: #CC333F
-    box-shadow: 0px 0px 5px 0px rgba(204,51,63,1)
-</style>
