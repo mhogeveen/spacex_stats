@@ -20,4 +20,5 @@ This project is an attempt at creating a better understanding Vue.js, Vue Router
 ## Mockups
 
 Dragons Page
+
 ![alt text](https://github.com/mhogeveen/spacex_stats/blob/master/mockups/SpaceX%20Stats%20-%20Dragons%20Page%20Mockup.png "Mockup Dragons Page")
