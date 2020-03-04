@@ -1,5 +1,7 @@
 # SpaceX Stats
-This project is an attempt at creating a better understanding Vue.js, Vue Router, Vuex and API calls.  
+This project is my attempt at getting a better understanding of Vue.js, Vue Router, Vuex and API calls.
+
+This document will be updated as the project evolves and develops.
 
 ## Used Technologies (subject to change)
 - Vue.js
@@ -8,14 +10,22 @@ This project is an attempt at creating a better understanding Vue.js, Vue Router
 - Vuetify
 - Axios (VueAxios)
 
+## Data
+The data used in this project is called from the spacexdata.com API, which can be found [here](https://api.spacexdata.com).
+
 ## Routes
-- home (in progress)
-...- /about (not started)
-...- /dragons (in progress)
-...- /capsules (not started)
-...- /launches (not started)
-...- /missions (not started)
-...- /tbd
+- /           --> Home (in progress)
+- /about      --> About (not started)
+- /dragons    --> Dragons (in progress)
+- /capsules   --> Capsules(not started)
+- /launches   --> Launches(not started)
+- /missions   --> Missions(not started)
+
+## To Run Locally
+1. clone repo
+2. `cd spacex_stats`
+4. `npm i`
+3. `npm run serve`
 
 ## Mockups
 
