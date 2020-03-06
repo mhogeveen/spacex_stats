@@ -5,7 +5,7 @@
       <!-- Tab links begin here -->
       <v-tabs
         v-model="tab"
-        background-color="rgba(30,198,217,0.1span)"
+        background-color="rgba(30,198,217,0.1)"
         color="#1EC6D9"
         light
       >
@@ -80,24 +80,98 @@
 
               <v-card class="dragon_details">
                 <v-row class="details_title">
-                  <v-col cols="4">
-                    <h2 class="details_title_text">Details</h2>
+                  <v-col cols="4" class="details_title_text">
+                    <h2>Details</h2>
                   </v-col>
-                  <v-col cols="8">
-                    <v-row class="details_title_choices">
-                      <v-radio-group v-model="distance" row class="choices_distance">
-                        <v-radio label="Meters" value="meters"></v-radio>
-                        <v-radio label="Feet" value="feet"></v-radio>
+                  <v-col cols="8" class="details_title_choices">
+                    <div class="choices_container">
+                      <v-radio-group
+                        v-model="distance"
+                        row
+                        class="choices_distance"
+                      >
+                        <v-radio
+                          label="Meters" value="meters"
+                          color="#1ec6d9"
+                          ></v-radio>
+                        <v-radio
+                          label="Feet"
+                          value="feet"
+                          color="#1ec6d9"
+                          ></v-radio>
                       </v-radio-group>
                       <div class="choices_seperator">
                       </div>
-                      <v-radio-group v-model="weight" row class="choices_weight">
-                        <v-radio label="kg" value="kg"></v-radio>
-                        <v-radio label="lbs" value="lbs"></v-radio>
+                      <v-radio-group
+                        v-model="weight"
+                        row
+                        class="choices_weight"
+                      >
+                        <v-radio
+                          label="kg"
+                          value="kg"
+                          color="#1ec6d9"
+                          ></v-radio>
+                        <v-radio
+                          label="lbs"
+                          value="lbs"
+                          color="#1ec6d9"
+                          ></v-radio>
                       </v-radio-group>
-                    </v-row>
+                    </div>
                   </v-col>
                 </v-row>
+
+                <div class="details_general">
+                  <v-row>
+                    <v-col cols="6">
+                      <div class="general_item">
+                        <p class="item_key">type</p>
+                        <p class="item_value">
+                          {{ dragon.type }}
+                        </p>
+                      </div>
+                    </v-col>
+                    <v-col cols="6">
+                      <div class="general_item">
+                        <p class="item_key">first_flight</p>
+                        <p class="item_value">
+                          {{ dragon.first_flight }}
+                        </p>
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="6">
+                      <div class="general_item">
+                        <p class="item_key">dry_mass</p>
+                        <p class="item_value">data</p>
+                      </div>
+                    </v-col>
+                    <v-col cols="6">
+                      <div class="general_item">
+                        <p class="item_key">crew_capacity</p>
+                        <p class="item_value">
+                          {{ dragon.crew_capacity }}
+                        </p>
+                      </div>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <v-col cols="6">
+                      <div class="general_item">
+                        <p class="item_key">diameter</p>
+                        <p class="item_value">data</p>
+                      </div>
+                    </v-col>
+                    <v-col cols="6">
+                      <div class="general_item">
+                        <p class="item_key">height_w_trunk</p>
+                        <p class="item_value">data</p>
+                      </div>
+                    </v-col>
+                  </v-row>
+              </div>
               </v-card>
 
             </v-container>
