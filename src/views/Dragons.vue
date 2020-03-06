@@ -78,7 +78,10 @@
                 </v-col>
               </v-row>
 
+              <!-- Data section -->
               <v-card class="dragon_details">
+
+                <!-- Data section title & unit picker -->
                 <v-row class="details_title">
                   <v-col cols="4" class="details_title_text">
                     <h2>Details</h2>
@@ -122,6 +125,7 @@
                   </v-col>
                 </v-row>
 
+                <!-- Data section general data -->
                 <div class="details_general">
                   <v-row>
                     <v-col cols="6">
@@ -177,7 +181,119 @@
                       </div>
                     </v-col>
                   </v-row>
-              </div>
+                </div>
+
+                <!-- Data section data per component -->
+                <div class="details_component">
+                  <v-expansion-panels
+                    accordion
+                    multiple
+                  >
+                    <v-expansion-panel>
+                      <v-expansion-panel-header>thrusters</v-expansion-panel-header>
+                      <v-expansion-panel-content>
+                        <v-row>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">type</p>
+                              <p class="item_value">
+                                {{ dragon.thrusters[0].type }}
+                              </p>
+                            </div>
+                          </v-col>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">amount</p>
+                              <p class="item_value">
+                                {{ dragon.thrusters[0].amount }}
+                              </p>
+                            </div>
+                          </v-col>
+                        </v-row>
+                        <v-row>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">pods</p>
+                              <p class="item_value">
+                                {{ dragon.thrusters[0].pods }}
+                              </p>
+                            </div>
+                          </v-col>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">isp</p>
+                              <p class="item_value">
+                                {{ dragon.thrusters[0].isp }}
+                              </p>
+                            </div>
+                          </v-col>
+                        </v-row>
+                        <v-row>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">fuel_1</p>
+                              <p class="item_value">
+                                {{ dragon.thrusters[0].fuel_1 }}
+                              </p>
+                            </div>
+                          </v-col>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">fuel_2</p>
+                              <p class="item_value">
+                                {{ dragon.thrusters[0].fuel_2 }}
+                              </p>
+                            </div>
+                          </v-col>
+                        </v-row>
+                        <v-row>
+                          <v-col cols="12">
+                              <p class="item_key">thrust</p>
+                          </v-col>
+                        </v-row>
+                        <v-row>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">kN</p>
+                              <p class="item_value">
+                                {{ dragon.thrusters[0].thrust.kN }}
+                              </p>
+                            </div>
+                          </v-col>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">lbf</p>
+                              <p class="item_value">
+                                {{ dragon.thrusters[0].thrust.lbf }}
+                              </p>
+                            </div>
+                          </v-col>
+                        </v-row>
+                      </v-expansion-panel-content>
+                    </v-expansion-panel>
+
+                    <v-expansion-panel>
+                      <v-expansion-panel-header>heat_shield</v-expansion-panel-header>
+                      <v-expansion-panel-content>
+
+                      </v-expansion-panel-content>
+                    </v-expansion-panel>
+
+                    <v-expansion-panel>
+                      <v-expansion-panel-header>payload : launch &amp; return &amp; pressurized_capsule</v-expansion-panel-header>
+                      <v-expansion-panel-content>
+
+                      </v-expansion-panel-content>
+                    </v-expansion-panel>
+
+                    <v-expansion-panel>
+                      <v-expansion-panel-header>trunk</v-expansion-panel-header>
+                      <v-expansion-panel-content>
+
+                      </v-expansion-panel-content>
+                    </v-expansion-panel>
+                  </v-expansion-panels>
+                </div>
               </v-card>
 
             </v-container>
@@ -201,14 +317,6 @@ export default {
     }
   },
   computed: {
-    // insertDryMass () {
-    //   console.log(this.weight)
-    //   if (this.weight === 'kg') {
-    //     return 'dry_mass_kg'
-    //   } else if (this.weight === 'lbs') {
-    //     return 'dry_mass_lbs'
-    //   }
-    // },
     insertDistance: function () {
       return this.distance
     },
