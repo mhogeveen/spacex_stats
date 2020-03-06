@@ -113,8 +113,8 @@
                           color="#1ec6d9"
                           ></v-radio>
                         <v-radio
-                          label="lbs"
-                          value="lbs"
+                          label="lb"
+                          value="lb"
                           color="#1ec6d9"
                           ></v-radio>
                       </v-radio-group>
@@ -145,7 +145,9 @@
                     <v-col cols="6">
                       <div class="general_item">
                         <p class="item_key">dry_mass</p>
-                        <p class="item_value">data</p>
+                        <p class="item_value">
+                          {{ dragon['dry_mass_' + insertWeight] }}
+                        </p>
                       </div>
                     </v-col>
                     <v-col cols="6">
@@ -161,13 +163,17 @@
                     <v-col cols="6">
                       <div class="general_item">
                         <p class="item_key">diameter</p>
-                        <p class="item_value">data</p>
+                        <p class="item_value">
+                          {{ dragon.diameter[insertDistance] }}
+                        </p>
                       </div>
                     </v-col>
                     <v-col cols="6">
                       <div class="general_item">
                         <p class="item_key">height_w_trunk</p>
-                        <p class="item_value">data</p>
+                        <p class="item_value">
+                          {{ dragon.height_w_trunk[insertDistance] }}
+                        </p>
                       </div>
                     </v-col>
                   </v-row>
@@ -195,6 +201,20 @@ export default {
     }
   },
   computed: {
+    // insertDryMass () {
+    //   console.log(this.weight)
+    //   if (this.weight === 'kg') {
+    //     return 'dry_mass_kg'
+    //   } else if (this.weight === 'lbs') {
+    //     return 'dry_mass_lbs'
+    //   }
+    // },
+    insertDistance: function () {
+      return this.distance
+    },
+    insertWeight: function () {
+      return this.weight
+    },
     ...mapState(['dragonsAPI'])
   },
   methods: {
