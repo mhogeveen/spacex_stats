@@ -248,21 +248,33 @@
                         </v-row>
                         <v-row>
                           <v-col cols="12">
-                              <p class="item_key">thrust</p>
+                              <p class="item_key" style="margin-bottom: 0">thrust</p>
                           </v-col>
                         </v-row>
                         <v-row>
                           <v-col cols="6">
                             <div class="general_item">
-                              <p class="item_key">kN</p>
+                              <p class="item_key">
+                                <v-icon class="item_key_icon">
+                                  mdi-subdirectory-arrow-right
+                                </v-icon>
+                                kN
+                              </p>
                               <p class="item_value">
                                 {{ dragon.thrusters[0].thrust.kN }}
                               </p>
                             </div>
                           </v-col>
+                        </v-row>
+                        <v-row>
                           <v-col cols="6">
                             <div class="general_item">
-                              <p class="item_key">lbf</p>
+                              <p class="item_key">
+                                <v-icon class="item_key_icon">
+                                  mdi-subdirectory-arrow-right
+                                </v-icon>
+                                lbf
+                              </p>
                               <p class="item_value">
                                 {{ dragon.thrusters[0].thrust.lbf }}
                               </p>
