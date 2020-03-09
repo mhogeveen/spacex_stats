@@ -190,7 +190,12 @@
                     multiple
                   >
                     <v-expansion-panel>
-                      <v-expansion-panel-header>thrusters</v-expansion-panel-header>
+                      <v-expansion-panel-header
+                        color="rgba(30,198,217,0.05)"
+                        class="component_header"
+                      >
+                        thrusters
+                      </v-expansion-panel-header>
                       <v-expansion-panel-content>
                         <v-row>
                           <v-col cols="6">
@@ -285,21 +290,71 @@
                     </v-expansion-panel>
 
                     <v-expansion-panel>
-                      <v-expansion-panel-header>heat_shield</v-expansion-panel-header>
+                      <v-expansion-panel-header
+                        color="rgba(30,198,217,0.05)"
+                        class="component_header"
+                      >
+                        heat_shield
+                      </v-expansion-panel-header>
+                      <v-expansion-panel-content>
+                        <v-row>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">material</p>
+                              <p class="item_value">
+                                {{ dragon.heat_shield.material }}
+                              </p>
+                            </div>
+                          </v-col>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">size_meters</p>
+                              <p class="item_value">
+                                {{ dragon.heat_shield.size_meters }}
+                              </p>
+                            </div>
+                          </v-col>
+                        </v-row>
+                        <v-row>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">temp_degrees</p>
+                              <p class="item_value">
+                                {{ dragon.heat_shield.temp_degrees }}
+                              </p>
+                            </div>
+                          </v-col>
+                          <v-col cols="6">
+                            <div class="general_item">
+                              <p class="item_key">dev_partner</p>
+                              <p class="item_value">
+                                {{ dragon.heat_shield.dev_partner }}
+                              </p>
+                            </div>
+                          </v-col>
+                        </v-row>
+                      </v-expansion-panel-content>
+                    </v-expansion-panel>
+
+                    <v-expansion-panel>
+                      <v-expansion-panel-header
+                      color="rgba(30,198,217,0.05)"
+                      class="component_header"
+                      >
+                        payload : launch &amp; return &amp; pressurized_capsule
+                      </v-expansion-panel-header>
                       <v-expansion-panel-content>
 
                       </v-expansion-panel-content>
                     </v-expansion-panel>
 
                     <v-expansion-panel>
-                      <v-expansion-panel-header>payload : launch &amp; return &amp; pressurized_capsule</v-expansion-panel-header>
-                      <v-expansion-panel-content>
-
-                      </v-expansion-panel-content>
-                    </v-expansion-panel>
-
-                    <v-expansion-panel>
-                      <v-expansion-panel-header>trunk</v-expansion-panel-header>
+                      <v-expansion-panel-header
+                      color="rgba(30,198,217,0.05)"
+                      class="component_header"
+                      >
+                        trunk
+                      </v-expansion-panel-header>
                       <v-expansion-panel-content>
 
                       </v-expansion-panel-content>
